@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Face API Demo</title>
+  <script defer src="face-api.min.js"></script>
+  <script defer src="script.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f0f0f0;
+    }
+
+    canvas {
+      position: absolute;
+    }
+
+    #loading-indicator,
+    #error-indicator {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 1rem;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    #error-indicator {
+      background-color: #fdd;
+      border-color: #f99;
+    }
+  </style>
+</head>
+<body>
+  <video id="video" width="1080" height="1000" autoplay muted aria-label="Video feed"></video>
+  <div id="loading-indicator" style="display: none;">Loading models...</div>
+  <div id="error-indicator" style="display: none;"></div>
+</body>
+</html>
